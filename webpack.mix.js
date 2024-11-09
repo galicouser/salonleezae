@@ -1,12 +1,18 @@
 const mix = require("laravel-mix");
 const path = require('path')
 
-if(process.env.MIX_PUBLIC_PATH !== null && process.env.MIX_PUBLIC_PATH !== undefined && process.env.MIX_PUBLIC_PATH !== '') {
-    mix.setPublicPath('public')
-      .webpackConfig({
-        output: {publicPath: process.env.MIX_PUBLIC_PATH}
-      });
-}
+// if(process.env.MIX_PUBLIC_PATH !== null && process.env.MIX_PUBLIC_PATH !== undefined && process.env.MIX_PUBLIC_PATH !== '') {
+//     mix.setPublicPath('public')
+//       .webpackConfig({
+//         output: {publicPath: process.env.MIX_PUBLIC_PATH}
+//       });
+// }
+mix.setPublicPath('public')
+    .webpackConfig({
+        output: {
+            publicPath: '/' // Or use the environment variable if needed: process.env.MIX_PUBLIC_PATH || '/'
+        }
+    });
 /**
  *
  * !Copy Assets
