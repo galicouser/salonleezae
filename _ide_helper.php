@@ -17869,47 +17869,6 @@
      
 }
 
-    namespace App\Currency { 
-            /**
-     * 
-     *
-     */ 
-        class CurrencyFacades {
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function getDefaultCurrency($array = false)
-        {
-                        /** @var \App\Currency\CurrencyChange $instance */
-                        return $instance->getDefaultCurrency($array);
-        }
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function defaultSymbol()
-        {
-                        /** @var \App\Currency\CurrencyChange $instance */
-                        return $instance->defaultSymbol();
-        }
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function format($amount)
-        {
-                        /** @var \App\Currency\CurrencyChange $instance */
-                        return $instance->format($amount);
-        }
-         
-    }
-     
-}
-
     namespace Berkayk\OneSignal { 
             /**
      * 
@@ -25938,7 +25897,6 @@ namespace  {
             class Vite extends \Illuminate\Support\Facades\Vite {}
             class Menu extends \Lavary\Menu\Facade {}
             class AuthHelper extends \App\Helpers\AuthHelper {}
-            class Currency extends \App\Currency\CurrencyFacades {}
             class OneSignal extends \Berkayk\OneSignal\OneSignalFacade {}
             class Image extends \Intervention\Image\Facades\Image {}
             class Flash extends \Laracasts\Flash\Flash {}
